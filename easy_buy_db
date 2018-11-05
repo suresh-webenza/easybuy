@@ -1,0 +1,308 @@
+-- MySQL dump 10.13  Distrib 5.5.50, for debian-linux-gnu (x86_64)
+--
+-- Host: localhost    Database: easy_buy_development
+-- ------------------------------------------------------
+-- Server version	5.5.50-0ubuntu0.14.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `banners`
+--
+
+DROP TABLE IF EXISTS `banners`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `banners` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `image_file_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `image_content_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `image_file_size` int(11) DEFAULT NULL,
+  `image_updated_at` datetime DEFAULT NULL,
+  `mob_image_file_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `mob_image_content_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `mob_image_file_size` int(11) DEFAULT NULL,
+  `mob_image_updated_at` datetime DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `banners`
+--
+
+LOCK TABLES `banners` WRITE;
+/*!40000 ALTER TABLE `banners` DISABLE KEYS */;
+INSERT INTO `banners` VALUES (1,'banner-01.jpg','image/jpeg',137729,'2016-11-23 13:14:58','m-banner-01.jpg','image/jpeg',405582,'2016-11-23 13:15:00','2016-11-23 13:15:01','2016-11-23 13:15:01'),(2,'banner-01.jpg','image/jpeg',137729,'2016-11-23 13:19:26','m-banner-01.jpg','image/jpeg',405582,'2016-11-23 13:19:27','2016-11-23 13:19:28','2016-11-23 13:19:28'),(3,'banner-01.jpg','image/jpeg',137729,'2016-11-23 13:20:13','banner-01.jpg','image/jpeg',137729,'2016-11-23 13:20:14','2016-11-23 13:20:15','2016-11-23 13:20:15');
+/*!40000 ALTER TABLE `banners` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `careers`
+--
+
+DROP TABLE IF EXISTS `careers`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `careers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `position` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `resume_file_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `resume_content_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `resume_file_size` int(11) DEFAULT NULL,
+  `resume_updated_at` datetime DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `careers`
+--
+
+LOCK TABLES `careers` WRITE;
+/*!40000 ALTER TABLE `careers` DISABLE KEYS */;
+INSERT INTO `careers` VALUES (1,'RoR','Sandeep','sandeep.memane@digitalf5.com','Result_Update_Emkay_Q2FY17.pdf','application/pdf',402644,'2016-11-22 07:23:11','2016-11-22 07:23:11','2016-11-22 07:23:11'),(2,'as','sandeep Memane','sandeepmemane5@gmail.com',NULL,NULL,NULL,NULL,'2016-11-22 13:15:23','2016-11-22 13:15:23');
+/*!40000 ALTER TABLE `careers` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `contacts`
+--
+
+DROP TABLE IF EXISTS `contacts`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `contacts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `phone_no` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `comment` text COLLATE utf8_unicode_ci,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `contacts`
+--
+
+LOCK TABLES `contacts` WRITE;
+/*!40000 ALTER TABLE `contacts` DISABLE KEYS */;
+INSERT INTO `contacts` VALUES (1,'sdaa','asda@adas.com','9865325874','asda ajsdbas\r\n','2016-11-22 07:58:17','2016-11-22 07:58:17'),(2,'Sandeep Memane','sandeepmemane5@gmail.com','9021609152','addas adsdsa','2016-11-22 12:46:44','2016-11-22 12:46:44');
+/*!40000 ALTER TABLE `contacts` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `newsrooms`
+--
+
+DROP TABLE IF EXISTS `newsrooms`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `newsrooms` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `news_date` date DEFAULT NULL,
+  `location` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8_unicode_ci,
+  `image_file_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `image_content_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `image_file_size` int(11) DEFAULT NULL,
+  `image_updated_at` datetime DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `link` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `category` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `newsrooms`
+--
+
+LOCK TABLES `newsrooms` WRITE;
+/*!40000 ALTER TABLE `newsrooms` DISABLE KEYS */;
+INSERT INTO `newsrooms` VALUES (1,'HIGHLIGHTS OF EASYBUY','2016-11-05','Andheri','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.\r\n','img01.jpg','image/jpeg',53639,'2016-11-22 11:48:17','2016-11-22 11:21:10','2016-11-23 05:12:14','https://www.google.com/',NULL),(2,'HIGHLIGHTS OF EASYBUY`','2016-11-05','Andheri','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam','img02.jpg','image/jpeg',21187,'2016-11-22 11:50:55','2016-11-22 11:50:56','2016-11-23 05:12:14','https://www.google.com/',NULL),(3,'HIGHLIGHTS OF EASYBUY','2016-11-22','Andheri','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam','img02.jpg','image/jpeg',21187,'2016-11-22 11:51:46','2016-11-22 11:51:47','2016-11-23 05:11:46','https://www.google.com/',NULL),(4,'HIGHLIGHTS OF EASYBUY','2016-11-22','Andheri','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam','img02.jpg','image/jpeg',21187,'2016-11-22 11:52:25','2016-11-22 11:52:25','2016-11-23 05:11:51','https://www.google.com/',NULL),(5,'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam','2016-11-22','Andheri','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam','img02.jpg','image/jpeg',21187,'2016-11-22 11:52:57','2016-11-22 11:52:58','2016-11-23 05:12:14','https://www.google.com/',NULL),(6,'',NULL,'','','video-banner.jpg','image/jpeg',775639,'2016-11-23 05:40:14','2016-11-23 05:40:15','2016-11-23 05:40:15','http://www.youtube.com/watch?v=opj24KnzrWo','Video'),(7,'',NULL,'','','video-banner.png','image/png',238114,'2016-11-23 05:51:19','2016-11-23 05:51:20','2016-11-23 05:51:20','http://www.youtube.com/watch?v=opj24KnzrWo','Video');
+/*!40000 ALTER TABLE `newsrooms` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `partners`
+--
+
+DROP TABLE IF EXISTS `partners`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `partners` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `phone_no` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `category` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `message` text COLLATE utf8_unicode_ci,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `partners`
+--
+
+LOCK TABLES `partners` WRITE;
+/*!40000 ALTER TABLE `partners` DISABLE KEYS */;
+INSERT INTO `partners` VALUES (2,'asasasda','asdjas@sjfdj.com','7856321458','Test','sdd csd','2016-11-22 10:18:30','2016-11-22 10:18:30'),(3,'Sandeep Memane','sandeepmemane5@gmail.com','9021609152','Untest','asda asd','2016-11-22 12:37:49','2016-11-22 12:37:49');
+/*!40000 ALTER TABLE `partners` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `positions`
+--
+
+DROP TABLE IF EXISTS `positions`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `positions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `positions`
+--
+
+LOCK TABLES `positions` WRITE;
+/*!40000 ALTER TABLE `positions` DISABLE KEYS */;
+INSERT INTO `positions` VALUES (2,'as','2016-11-22 09:58:13','2016-11-22 09:58:13');
+/*!40000 ALTER TABLE `positions` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `schema_migrations`
+--
+
+DROP TABLE IF EXISTS `schema_migrations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `schema_migrations` (
+  `version` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  UNIQUE KEY `unique_schema_migrations` (`version`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `schema_migrations`
+--
+
+LOCK TABLES `schema_migrations` WRITE;
+/*!40000 ALTER TABLE `schema_migrations` DISABLE KEYS */;
+INSERT INTO `schema_migrations` VALUES ('20161122050612'),('20161122062201'),('20161122065838'),('20161122075002'),('20161122094720'),('20161122100156'),('20161122104221'),('20161123045350'),('20161123052946'),('20161123063742'),('20161123130029');
+/*!40000 ALTER TABLE `schema_migrations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `store_locators`
+--
+
+DROP TABLE IF EXISTS `store_locators`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `store_locators` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `address` text COLLATE utf8_unicode_ci,
+  `store_name` text COLLATE utf8_unicode_ci,
+  `latitude` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `longitude` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `contact_no` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `show_on_home` tinyint(1) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  `state` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `city` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `store_locators`
+--
+
+LOCK TABLES `store_locators` WRITE;
+/*!40000 ALTER TABLE `store_locators` DISABLE KEYS */;
+INSERT INTO `store_locators` VALUES (2,'The Golden Mandir, BAZAAR STREET,OPP. TOWN POLICE STATION,SALEM','Salem','11.6537987','78.1582251',NULL,NULL,'2016-11-22 13:23:31','2016-11-25 08:15:09','Tamil Nadu','SALEM'),(3,'VELAYUTHASWAMY COMPLEX,76/69, PERUNDURAI ROAD, Teachers colony, ERODE','Erode','11.20049','77.4223',NULL,NULL,'2016-11-22 13:23:31','2016-11-25 08:15:09','Tamil Nadu','ERODE'),(4,'KESAV PLAZA,ST JOSEPHS COLLEGE ROAD, NEAR CHATRAM BUS STAND, TRICHY','Trichy','10.828652','78.6908718',NULL,NULL,'2016-11-22 13:23:32','2016-11-25 08:15:09','Tamil Nadu','TRICHY'),(5,'No 17, Besides Kidss Talk,  Kamal 2nd street Chinnachokkikulam,Madurai - 02','Madurai ','9.9360261','78.0995608',NULL,NULL,'2016-11-22 13:23:32','2016-11-25 08:15:09','Tamil Nadu','Madurai'),(6,'COURT ROAD, NEAR AMBEDKAR CHOWRASTHA,KARIMNAGAR','Karimarnagar','18.26364','79.07311',NULL,NULL,'2016-11-22 13:23:32','2016-11-25 08:15:09','Telangana','KARIMNAGAR'),(7,'KASBA BAZAR,KHAMMAM','Khammam','17.14479','80.08305',NULL,NULL,'2016-11-22 13:23:32','2016-11-25 08:15:09','Telangana','KHAMMAM'),(8,'LALITHANAGAR,Next to Megha Theatre,DILSUKHNAGAR Main road, HYDERABAD','Dilsuknagar','17.22061','78.31327',NULL,NULL,'2016-11-22 13:23:32','2016-11-25 08:15:10','Telangana','HYDERABAD'),(9,'Beside Jaya Hospital, CHOWRASHA,HAAMKONDA,WARANGAL','Warangal','18.002004','79.34134',NULL,NULL,'2016-11-22 13:23:32','2016-11-25 08:15:10','Telangana','WARANGAL'),(10,'#  31-112, Ward No. 16, Survey No. 1009,  Plot No. HIG-485, Phase - VI, \nKPHB Colony, JNTU Road, Besides Axis Bank, Near Forum Sujana Mall, Hydrabad ','Kukatpally ','17.4866719','78.3909364',NULL,NULL,'2016-11-22 13:23:32','2016-11-25 08:15:10','Telangana','Hydrabad'),(11,'NUCLEUS MALL,RAMLING KHIND GALLI, Kirloskar Road, BELAGAVI','Belagum','15.5326','74.30305',NULL,NULL,'2016-11-22 13:23:32','2016-11-25 08:15:10','Karnataka','BELAGAVI'),(12,'SUTARIA COMPLEX, NEXT TO METROPOLIS HOTEL, KOPPIKAR ROAD,HUBBALI ,KARNATAKA','Hubli','15.20574','75.08305',NULL,NULL,'2016-11-22 13:23:32','2016-11-25 08:15:10','Karnataka','HUBBALI'),(13,'WEST GATE VALUE MALL # 23A-6-66,# 1/2, 59TH C CROSS 4TH M BLOCK, RAJAJINAGAR,,BANGALORE-560010,KARNATAKA','Bangalore ','12.58577','77.33428',NULL,NULL,'2016-11-22 13:23:32','2016-11-25 08:15:10','Karnataka','BANGALORE'),(14,'GURUNATH KOLLUR,CMC # 8-9-21/1 (3), UDGIR ROAD, GULLAR HAVELLI,,BIDAR-585401,KARNATAKA','Bidar ','17.54528','77.30558',NULL,NULL,'2016-11-22 13:23:32','2016-11-25 08:15:10','Karnataka','BIDAR'),(15,'KALESWARA RAO ROAD, NEAR RAMALAYAM, BESANT ROAD VIJAYAWADA.','Vijayawada - Besant Road','16.30459','80.37389',NULL,NULL,'2016-11-22 13:23:32','2016-11-25 08:15:10','Andrapradesh','VIJAYAWADA'),(16,'PVP Mall, UNIT NO 2F, 31 TO 34, MG ROAD,KRISHNA DISTRICT,,VIJAYAWADA-520010,ANDHRA PRADESH','Vijayawada - PVP','16.5021702','80.6400266',NULL,NULL,'2016-11-22 13:23:32','2016-11-25 08:15:10','Andrapradesh','VIJAYAWADA'),(17,'COSTAL CITY CENTER MALL,UNDI MAIN ROAD,BHIMAVARAM.','Bhimavaram','16.32462','81.31033',NULL,NULL,'2016-11-22 13:23:32','2016-11-25 08:15:10','Andrapradesh','BHIMAVARAM'),(18,'1ST FLOOR, NCS MALL, OPP BUS STAND,VIZIANAGARAM.','Vizianagaram','18.1073889','83.3967496',NULL,NULL,'2016-11-22 13:23:33','2016-11-25 08:15:10','Andrapradesh','VIZIANAGARAM');
+/*!40000 ALTER TABLE `store_locators` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `phone_no` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `admin` tinyint(1) DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `encrypted_password` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '',
+  `reset_password_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `reset_password_sent_at` datetime DEFAULT NULL,
+  `remember_created_at` datetime DEFAULT NULL,
+  `sign_in_count` int(11) NOT NULL DEFAULT '0',
+  `current_sign_in_at` datetime DEFAULT NULL,
+  `last_sign_in_at` datetime DEFAULT NULL,
+  `current_sign_in_ip` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `last_sign_in_ip` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `index_users_on_email` (`email`),
+  UNIQUE KEY `index_users_on_reset_password_token` (`reset_password_token`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'Admin',NULL,1,'admin@easybuy.com','$2a$10$tH/ICAMpfSp./zJLg.gKT.uaOyw5glssy4GEw8bLBkhPIGA3vIuIu',NULL,NULL,NULL,5,'2016-11-25 08:11:04','2016-11-23 04:56:17','127.0.0.1','127.0.0.1','2016-11-22 06:54:56','2016-11-25 08:11:04');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2016-11-28 11:56:11
